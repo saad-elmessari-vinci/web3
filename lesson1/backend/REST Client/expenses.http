@@ -1,0 +1,20 @@
+######### NORMAL OPERATION  ###########
+@baseUrl = http://localhost:3000
+
+### GET all expenses
+GET {{baseUrl}}/api/expenses
+
+### POST create a new expense
+POST {{baseUrl}}/api/expenses
+Content-Type: application/json
+
+{
+   "date": "2025-09-19",
+   "description": "Dîner",
+   "payer": "Bob",
+   "amount": 20
+}
+
+### POST reset the expenses to initial data
+POST {{baseUrl}}/api/expenses/reset
+
